@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
         brutalist:
-          "bg-background text-foreground rounded-lg border-2 border-border shadow-brutal translate-x-0 translate-y-0 transition-all duration-300 ease-in-out hover:shadow-brutal-hover hover:-translate-x-1 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none",
+          "bg-background text-foreground rounded-lg border-2 border-border shadow-brutal translate-x-0 translate-y-0 transition-all duration-300 hover:shadow-brutal-hover hover:-translate-x-1 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
         outline:

@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/navbar"
 // import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Layout({

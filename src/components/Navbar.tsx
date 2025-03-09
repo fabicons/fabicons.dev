@@ -40,26 +40,33 @@ const NavItem = ({
 
 export default function Navbar() {
   return (
-    <Box>
-      <nav>
-        <ul className="space-y-6">
-          <li>
-            <NavItem text="Home" icon={<Home />} />
-          </li>
-          <li>
-            <NavItem text="About" icon={<ScanFace />} />
-          </li>
-          <li>
-            <NavItem text="Education" icon={<GraduationCap />} />
-          </li>
-          <li>
-            <NavItem text="Experience" icon={<BriefcaseBusiness />} />
-          </li>
-          <li>
-            <NavItem text="Contact" icon={<Contact />} />
-          </li>
-        </ul>
-      </nav>
-    </Box>
+    <div className="space-y-6">
+      <Box>
+        <nav>
+          <ul className="space-y-6">
+            <li>
+              <NavItem text="Home" icon={<Home />} />
+            </li>
+            <li>
+              <NavItem text="About" icon={<ScanFace />} />
+            </li>
+            <li>
+              <NavItem text="Education" icon={<GraduationCap />} />
+            </li>
+            <li>
+              <NavItem text="Experience" icon={<BriefcaseBusiness />} />
+            </li>
+            <li>
+              <NavItem text="Contact" icon={<Contact />} />
+            </li>
+          </ul>
+        </nav>
+      </Box>
+      <div className="flex gap-6 *:flex-1">
+        <Box>Theme</Box>
+        <Box>lang</Box>
+
+      </div>
+    </div>
   )
 }
