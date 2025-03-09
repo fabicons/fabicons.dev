@@ -9,31 +9,20 @@ export default function Layout({
   return (
     <>
       <main className="container min-h-screen mx-auto grid border">
-        <div
-          className="grid gap-6 "
-          style={{
-            gridTemplateRows: '1fr auto 1fr',
-            gridTemplateColumns: '1fr auto',
-            gridTemplateAreas: `
-              "empty-top empty-top"
-              "content navbar"
-              "empty-bottom empty-bottom"
-            `,
-          }}
-        >
+        <div className="grid gap-6 grid-template-center-layout">
           {/* Empty top row for spacing */}
-          <div style={{ gridArea: 'empty-top' }}></div>
+          <div className="grid-area-empty-top"></div>
 
           {/* Content row */}
-          <div style={{ gridArea: 'content' }} className="w-full">
+          <div className="grid-area-content w-full">
             {children}
           </div>
-          <div style={{ gridArea: 'navbar', width: 'fit-content' }}>
+          <div className="grid-area-navbar">
             <Navbar />
           </div>
 
           {/* Empty bottom row for spacing */}
-          <div style={{ gridArea: 'empty-bottom' }}></div>
+          <div className="grid-area-empty-bottom"></div>
         </div>
       </main>
     </>

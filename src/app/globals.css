@@ -43,9 +43,6 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-
-
 }
 
 :root {
@@ -101,7 +98,7 @@
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.922 0 0); 
+  --border: oklch(0.922 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
   --chart-1: oklch(0.488 0.243 264.376);
@@ -125,5 +122,34 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom grid layout utilities */
+@layer utilities {
+  .grid-template-center-layout {
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'empty-top empty-top'
+      'content navbar'
+      'empty-bottom empty-bottom';
+  }
+
+  .grid-area-empty-top {
+    grid-area: empty-top;
+  }
+
+  .grid-area-content {
+    grid-area: content;
+  }
+
+  .grid-area-navbar {
+    grid-area: navbar;
+    width: fit-content;
+  }
+
+  .grid-area-empty-bottom {
+    grid-area: empty-bottom;
   }
 }
