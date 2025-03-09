@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Navbar from "@/components/Navbar"
 // import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Layout({
@@ -8,15 +8,13 @@ export default function Layout({
 }>) {
   return (
     <>
-      <main className="container min-h-screen mx-auto grid border">
+      <main className="container min-h-screen mx-auto grid  px-4">
         <div className="grid gap-6 grid-template-center-layout">
           {/* Empty top row for spacing */}
           <div className="grid-area-empty-top"></div>
 
           {/* Content row */}
-          <div className="grid-area-content w-full">
-            {children}
-          </div>
+          <div className="grid-area-content w-full">{children}</div>
           <div className="grid-area-navbar">
             <Navbar />
           </div>

@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { cn } from '@/lib/utils'
-import { Slot } from '@radix-ui/react-slot'
+import * as React from "react"
+import { cn } from "@/lib/utils"
+import { Slot } from "@radix-ui/react-slot"
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   asChild?: boolean
@@ -8,16 +8,19 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
   ({ className, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'div'
+    const Comp = asChild ? Slot : "div"
     return (
       <Comp
-        className={cn('rounded-md border-2 border-border p-6', className)}
+        className={cn(
+          "rounded-lg border-2 border-border bg-background p-6 shadow-brutal",
+          className
+        )}
         ref={ref}
         {...props}
       />
     )
   }
 )
-Box.displayName = 'Box'
+Box.displayName = "Box"
 
 export { Box }

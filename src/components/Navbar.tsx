@@ -1,13 +1,13 @@
-import { Box } from './ui/box'
+import { Box } from "./ui/box"
 import {
   BriefcaseBusiness,
   Contact,
   GraduationCap,
   Home,
   ScanFace,
-} from 'lucide-react'
-import Link from 'next/link'
-import { Button, buttonVariants } from './ui/button'
+} from "lucide-react"
+import Link from "next/link"
+import { Button, buttonVariants } from "./ui/button"
 
 const NavItem = ({
   href,
@@ -20,7 +20,7 @@ const NavItem = ({
 }) => {
   return href ? (
     <Link
-      className={buttonVariants({ variant: 'default' })}
+      className={buttonVariants({ variant: "default" })}
       href={href}
       aria-label={text}
     >
@@ -30,7 +30,7 @@ const NavItem = ({
     <Button
       size="lg"
       variant="brutalist"
-      className="w-full justify-between py-4 gap-6 h-fit items-center"
+      className="w-full justify-between py-4 h-fit gap-6 "
     >
       <p className="text-2xl">{text}</p>
       {icon}
