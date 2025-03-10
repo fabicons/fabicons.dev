@@ -1,18 +1,25 @@
 import { Box } from "@/components/ui/box"
 import { GithubIcon, LinkedinIcon } from "~/icons"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 import profilePicture from "~/profile-pic.webp"
 import Image from "next/image"
+import { Cookie, Heart } from "lucide-react"
+import TechStackList from "./_components/tech-stack-list"
 
 export default function Home() {
   return (
-    <section className="grid grid-cols-9 grid-rows-8 h-full gap-6">
-      <Box className="col-span-full md:col-span-3 row-span-2">
+    <section className="flex flex-col lg:grid lg:grid-cols-9 lg:grid-rows-8 h-full gap-6">
+      {/* Fabicons */}
+      <Box className="w-full lg:col-span-3 lg:row-span-2 font-black text-4xl flex flex-col justify-center">
         <p>fabian.</p> <p>fabicons.</p> <p>frontend dev.</p>
       </Box>
-      <Box className="col-span-full md:col-span-4 row-span-3">LOCATION</Box>
-      <Box className="col-span-full md:col-span-2 row-span-3 p-0">
+      {/* Location */}
+      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-4 font-black">
+        Palma de Mallorca
+      </Box>
+      {/* Profile pic */}
+      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-2 p-0">
         <Image
           src={profilePicture}
           alt="Fabian's profile picture"
@@ -22,11 +29,17 @@ export default function Home() {
           priority
         />
       </Box>
-      <Box className="col-span-full md:col-span-3 row-span-6">TECH STACK</Box>
-      <Box className="col-span-full md:col-span-6 row-span-3">WORKING</Box>
+      {/* Tech stack*/}
+      <Box className="w-full lg:col-span-3 lg:row-span-6 font-black text-4xl space-y-6 text-center">
+        <p> Tech Stack</p>
+        <TechStackList />
+      </Box>
+      {/* Featured project */}
+      <Box className="w-full lg:col-span-6 lg:row-span-3">WORKING</Box>
+      {/* Github icon */}
       <Link
         href=""
-        className={`col-span-full md:col-span-1 row-span-1 h-full ${buttonVariants(
+        className={`w-auto lg:col-span-1 lg:row-span-1 lg:h-full ${buttonVariants(
           {
             variant: "brutalist",
           }
@@ -34,19 +47,27 @@ export default function Home() {
       >
         <GithubIcon size={32} strokeWidth={1.5} />
       </Link>
+      {/* Linkedin icon*/}
       <Link
         href=""
-        className={`col-span-full md:col-span-1 row-span-1 h-full ${buttonVariants(
+        className={`w-auto lg:col-span-1 lg:row-span-1 lg:h-full ${buttonVariants(
           {
             variant: "brutalist",
           }
         )}`}
       >
-        <LinkedinIcon />
+        <LinkedinIcon className="stroke-1" />
       </Link>
-      <Box className="col-span-full md:col-span-4 row-span-2"></Box>
-      <Box className="col-span-full md:col-span-1 row-span-1 col-start-4"></Box>
-      <Box className="col-span-full md:col-span-1 row-span-1 col-start-5"></Box>
+      {/* Languages */}
+      <Box className="w-full lg:col-span-4 lg:row-span-2"> talk to me in:</Box>
+      {/* Heart */}
+      <Button className="w-auto lg:col-span-1 lg:row-span-1 lg:col-start-4 lg:h-full">
+        <Heart />
+      </Button>
+      {/* Cookie */}
+      <Button className="w-auto lg:col-span-1 lg:row-span-1 lg:col-start-5 lg:h-full">
+        <Cookie />
+      </Button>
     </section>
   )
 }
