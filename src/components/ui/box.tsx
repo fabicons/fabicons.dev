@@ -12,7 +12,7 @@ const Box = React.forwardRef<HTMLDivElement, BoxProps>(
     return (
       <Comp
         className={cn(
-          "rounded-lg border-2 border-border bg-background p-6 shadow-brutal",
+          "rounded-xl border-2 border-border bg-background p-6 shadow-brutal",
           className
         )}
         ref={ref}

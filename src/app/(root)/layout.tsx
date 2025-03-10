@@ -14,8 +14,8 @@ export default function Layout({
           <div className="grid-area-empty-top"></div>
 
           {/* Content row */}
-          <div className="grid-area-content w-full">{children}</div>
-          <div className="grid-area-navbar">
+          <div className="grid-area-content">{children}</div>
+          <div className="grid-area-navbar hidden lg:block">
             <Navbar />
           </div>
 
@@ -26,3 +26,5 @@ export default function Layout({
     </>
   )
 }
+
+

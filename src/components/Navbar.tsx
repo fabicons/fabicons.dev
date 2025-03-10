@@ -20,7 +20,7 @@ const NavItem = ({
 }) => {
   return href ? (
     <Link
-      className={buttonVariants({ variant: "default" })}
+      className={buttonVariants({ variant: "brutalist" })}
       href={href}
       aria-label={text}
     >
@@ -40,12 +40,12 @@ const NavItem = ({
 
 export default function Navbar() {
   return (
-    <div className="space-y-6">
-      <Box>
+    <div className="space-y-6 h-full ">
+    
         <nav>
           <ul className="space-y-6">
             <li>
-              <NavItem text="Home" icon={<Home />} />
+              <NavItem text="Home" icon={<Home  />} />
             </li>
             <li>
               <NavItem text="About" icon={<ScanFace />} />
@@ -61,11 +61,10 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-      </Box>
-      <div className="flex gap-6 *:flex-1">
-        <Box>Theme</Box>
-        <Box>lang</Box>
-
+   
+      <div className="flex gap-6 ">
+        <Box className="flex-1">Theme</Box>
+        <Box className="flex-1 ">lang</Box>
       </div>
     </div>
   )
