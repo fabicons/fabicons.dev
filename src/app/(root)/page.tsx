@@ -6,6 +6,7 @@ import profilePicture from "~/profile-pic.webp"
 import Image from "next/image"
 import { Cookie, Heart } from "lucide-react"
 import TechStackList from "./_components/tech-stack-list"
+import LocationGlobe from "./_components/location-globe"
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
         <p>fabian.</p> <p>fabicons.</p> <p>frontend dev.</p>
       </Box>
       {/* Location */}
-      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-4 font-black">
-        Palma de Mallorca
+      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-4 font-black pb-0">
+        <LocationGlobe></LocationGlobe>
       </Box>
       {/* Profile pic */}
       <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-2 p-0">
