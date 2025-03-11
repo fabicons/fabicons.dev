@@ -8,8 +8,8 @@ export default function Layout({
 }>) {
   return (
     <>
-      <main className="container min-h-screen mx-auto grid  px-4">
-        <div className="grid gap-6 grid-template-center-layout">
+      <main className="container min-h-screen mx-auto grid px-4 py-4 xl:py-0">
+        <div className="grid space-x-6 grid-template-center-layout ">
           {/* Empty top row for spacing */}
           <div className="grid-area-empty-top"></div>
 

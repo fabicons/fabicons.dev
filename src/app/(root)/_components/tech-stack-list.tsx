@@ -12,7 +12,7 @@ export default function TechStackList() {
       <div className="flex justify-center flex-wrap gap-6">
         <Tooltip>
           <TooltipTrigger>
-            <JavascriptIcon size={80} />
+            <JavascriptIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Javascript</p>
@@ -20,7 +20,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <TypescriptIcon size={80} />
+            <TypescriptIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Typescript</p>
@@ -28,7 +28,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <ReactIcon size={80} />
+            <ReactIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">React</p>
@@ -36,7 +36,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <NextjsIcon size={80} />
+            <NextjsIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Nextjs</p>
@@ -44,7 +44,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <NodejsIcon size={80} />
+            <NodejsIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Nodejs</p>
@@ -52,7 +52,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <NpmIcon size={80} />
+            <NpmIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Npm</p>
@@ -60,7 +60,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <PythonIcon size={80} />
+            <PythonIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Python</p>
@@ -68,7 +68,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <DockerIcon size={80} />
+            <DockerIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Docker</p>
@@ -76,7 +76,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <JavascriptIcon size={80} />
+            <JavascriptIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Typescript</p>
@@ -84,7 +84,7 @@ export default function TechStackList() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <JavascriptIcon size={80} />
+            <JavascriptIcon  />
           </TooltipTrigger>
           <TooltipContent>
             <p className="font-bold">Typescript</p>
