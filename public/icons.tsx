@@ -108,19 +108,10 @@ export const NextjsIcon = forwardRef<SVGSVGElement, IconProps>(
   }
 )
 
-
 NextjsIcon.displayName = "NextjsIcon"
 
 export const ReactIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -144,15 +135,7 @@ export const ReactIcon = forwardRef<SVGSVGElement, IconProps>(
 ReactIcon.displayName = "ReactIcon"
 
 export const JavascriptIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -176,15 +159,7 @@ export const JavascriptIcon = forwardRef<SVGSVGElement, IconProps>(
 JavascriptIcon.displayName = "JavascriptIcon"
 
 export const TypescriptIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -208,15 +183,7 @@ export const TypescriptIcon = forwardRef<SVGSVGElement, IconProps>(
 TypescriptIcon.displayName = "TypescriptIcon"
 
 export const NodejsIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -240,15 +207,7 @@ export const NodejsIcon = forwardRef<SVGSVGElement, IconProps>(
 NodejsIcon.displayName = "NodejsIcon"
 
 export const NpmIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -272,15 +231,7 @@ export const NpmIcon = forwardRef<SVGSVGElement, IconProps>(
 NpmIcon.displayName = "NpmIcon"
 
 export const PythonIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -304,15 +255,7 @@ export const PythonIcon = forwardRef<SVGSVGElement, IconProps>(
 PythonIcon.displayName = "PythonIcon"
 
 export const DockerIcon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      color = "currentColor",
-      size = 24,
-      className = "",
-      ...props
-    },
-    ref
-  ) => {
+  ({ color = "currentColor", size = 24, className = "", ...props }, ref) => {
     return (
       <svg
         ref={ref}
@@ -337,3 +280,110 @@ export const DockerIcon = forwardRef<SVGSVGElement, IconProps>(
 )
 
 DockerIcon.displayName = "DockerIcon"
+
+export const Cookie = forwardRef<SVGSVGElement, IconProps>(
+  (
+    {
+      color = "currentColor",
+      size = 24,
+      strokeWidth = 2,
+      absoluteStrokeWidth,
+      className = "",
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <svg
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={color}
+        strokeWidth={absoluteStrokeWidth ? strokeWidth : strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={cn("lucide lucide-github", className)}
+        {...props}
+      >
+        <path
+          d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12"
+        />
+        <path
+          d="M22 12C22 10.0222 21.4135 8.08879 20.3147 6.4443C19.2159 4.79981 17.6541 3.51809 15.8268 2.76121C13.9996 2.00433 11.9889 1.8063 10.0491 2.19215C8.10929 2.578 6.32746 3.53041 4.92893 4.92894C3.53041 6.32746 2.578 8.10929 2.19215 10.0491C1.80629 11.9889 2.00433 13.9996 2.7612 15.8268C3.51808 17.6541 4.79981 19.2159 6.4443 20.3147C8.08879 21.4135 10.0222 22 12 22"
+        />
+        <path
+          d="M16 15.5V15.51"
+        />
+        <path
+          d="M8.5 8.5V8.51"
+        />
+        <path
+          d="M7 14V14.01"
+        />
+        <path
+          d="M11 17V17.01"
+        />
+        <path
+          d="M12 12V12.01"
+        />
+        <path
+          d="M17 10V10.01"
+        />
+        <path
+          d="M13 7V7.01"
+        />
+      </svg>
+    )
+  }
+)
+
+Cookie.displayName = "Cookie"
+
+export const Cookie2 = forwardRef<SVGSVGElement, IconProps>(
+  (
+    {
+      color = "currentColor",
+      size = 24,
+      strokeWidth = 2,
+      absoluteStrokeWidth,
+      className = "",
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <svg
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={color}
+        strokeWidth={absoluteStrokeWidth ? strokeWidth : strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={cn("lucide lucide-github", className)}
+        {...props}
+      >
+        <path
+          d="M4.92896 19.0711C6.32748 20.4696 8.10931 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8269 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C21.305 12.214 20.5649 12.2345 19.8591 12.0593C19.1533 11.8841 18.5087 11.5198 17.9945 11.0056C17.4803 10.4914 17.116 9.8467 16.9408 9.14094C16.7655 8.43517 16.786 7.69499 17 7C16.305 7.214 15.5649 7.23449 14.8591 7.05927C14.1533 6.88406 12.5142 6.5142 12 6"
+        />
+        <path
+          d="M4.9514 18.8186C5.66725 18.8617 6.37274 18.6951 6.99199 18.3369C7.61123 17.9787 8.12081 17.4423 8.46592 16.7855C8.81102 16.1286 8.9786 15.3762 8.95062 14.6091C8.92264 13.842 8.70017 13.0892 8.30713 12.4317C9.02299 12.4748 9.72848 12.3083 10.3477 11.95C10.967 11.5918 11.4765 11.0554 11.8217 10.3986C12.1668 9.74174 12.3343 8.98931 12.3064 8.2222C12.2784 7.45509 12.0559 6.70232 11.6629 6.04485"
+        />
+        <path
+          d="M16 15.5V15.51"
+        />
+        <path
+          d="M11 17V17.01"
+        />
+      </svg>
+    )
+  }
+)
+
+Cookie2.displayName = "Cookie2"

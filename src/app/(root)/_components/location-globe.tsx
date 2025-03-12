@@ -63,7 +63,7 @@ export default function LocationGlobe() {
   }, [r])
 
   return (
-    <div className="shadow-feature-card relative flex h-60 flex-col gap-6 overflow-hidden rounded-xl ">
+    <div className="relative flex h-40 flex-col gap-6 overflow-hidden rounded-xl ">
       <div className="flex items-center gap-2">
         <MapPinIcon className="size-[18px]" />
         <h2 className="text-sm">palma de mallorca</h2>

@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar"
+import { Toaster } from "@/components/providers/toaster"
 // import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Layout({
@@ -23,8 +24,7 @@ export default function Layout({
           <div className="grid-area-empty-bottom"></div>
         </div>
       </main>
+      <Toaster />
     </>
   )
 }
-
-
