@@ -1,10 +1,9 @@
 import { Box } from "@/components/ui/box"
 import { GithubIcon, LinkedinIcon } from "~/icons"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 import profilePicture from "~/profile-pic.webp"
 import Image from "next/image"
-import { Cookie, Heart } from "lucide-react"
 import TechStackList from "./_components/tech-stack-list"
 import LocationGlobe from "./_components/location-globe"
 import HeartButton from "./_components/heart-button"
@@ -18,8 +17,8 @@ export default function Home() {
         <p>fabian.</p> <p>fabicons.</p> <p>frontend dev.</p>
       </Box>
       {/* Location */}
-      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-4 font-black pb-0">
-        <LocationGlobe></LocationGlobe>
+      <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-4 pt-auto pb-0 px-0">
+        <LocationGlobe />
       </Box>
       {/* Profile pic */}
       <Box className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-2 p-0">
@@ -62,7 +61,18 @@ export default function Home() {
         <LinkedinIcon className="stroke-1" />
       </Link>
       {/* Languages */}
-      <Box className="w-full lg:col-span-4 lg:row-span-2"> talk to me in:</Box>
+      <Box className="w-full lg:col-span-4 lg:row-span-2 font-black text-2xl flex flex-col gap-6">
+        {" "}
+        <p> Talk to me in:</p>
+        <div className="flex gap-4">
+          <p>EN</p>
+          <p>DE</p>
+          <p>ES</p>
+          <p>CA</p>
+          <p>NOR</p>
+        </div>
+
+      </Box>
       {/* Heart */}
       <HeartButton />
       {/* Cookie */}

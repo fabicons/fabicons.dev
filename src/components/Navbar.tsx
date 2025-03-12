@@ -20,11 +20,14 @@ const NavItem = ({
 }) => {
   return href ? (
     <Link
-      className={buttonVariants({ variant: "brutalist" })}
+      className={`w-full !justify-between py-4 h-fit gap-6  ${buttonVariants({
+        variant: "brutalist",
+      })}`}
       href={href}
       aria-label={text}
     >
-      {icon} <p>{text}</p>
+      <p className="text-2xl">{text}</p>
+      {icon}
     </Link>
   ) : (
     <Button
@@ -41,27 +44,26 @@ const NavItem = ({
 export default function Navbar() {
   return (
     <div className="space-y-6 h-full ">
-    
-        <nav>
-          <ul className="space-y-6">
-            <li>
-              <NavItem text="Home" icon={<Home  />} />
-            </li>
-            <li>
-              <NavItem text="About" icon={<ScanFace />} />
-            </li>
-            <li>
-              <NavItem text="Education" icon={<GraduationCap />} />
-            </li>
-            <li>
-              <NavItem text="Experience" icon={<BriefcaseBusiness />} />
-            </li>
-            <li>
-              <NavItem text="Contact" icon={<Contact />} />
-            </li>
-          </ul>
-        </nav>
-   
+      <nav>
+        <ul className="space-y-6">
+          <li>
+            <NavItem text="Home" icon={<Home />} />
+          </li>
+          <li>
+            <NavItem text="About" href="/about" icon={<ScanFace />} />
+          </li>
+          <li>
+            <NavItem text="Education" icon={<GraduationCap />} />
+          </li>
+          <li>
+            <NavItem text="Experience" icon={<BriefcaseBusiness />} />
+          </li>
+          <li>
+            <NavItem text="Contact" icon={<Contact />} />
+          </li>
+        </ul>
+      </nav>
+
       <div className="flex gap-6 ">
         <Box className="flex-1">Theme</Box>
         <Box className="flex-1 ">lang</Box>
