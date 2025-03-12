@@ -7,6 +7,8 @@ import Image from "next/image"
 import { Cookie, Heart } from "lucide-react"
 import TechStackList from "./_components/tech-stack-list"
 import LocationGlobe from "./_components/location-globe"
+import HeartButton from "./_components/heart-button"
+import CookieButton from "./_components/cookie-button"
 
 export default function Home() {
   return (
@@ -62,13 +64,9 @@ export default function Home() {
       {/* Languages */}
       <Box className="w-full lg:col-span-4 lg:row-span-2"> talk to me in:</Box>
       {/* Heart */}
-      <Button className="w-auto lg:col-span-1 lg:row-span-1 lg:col-start-4 lg:h-full">
-        <Heart />
-      </Button>
+      <HeartButton />
       {/* Cookie */}
-      <Button className="w-auto lg:col-span-1 lg:row-span-1 lg:col-start-5 lg:h-full">
-        <Cookie />
-      </Button>
+      <CookieButton />
     </section>
   )
 }
