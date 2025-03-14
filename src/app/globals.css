@@ -155,3 +155,15 @@
     grid-area: empty-bottom;
   }
 }
+
+.bento-box {
+  will-change: transform, opacity;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+  }
+}

@@ -1,10 +1,11 @@
-import { Box } from "@/components/ui/box"
-import React from "react"
+// app/about/page.tsx
+import { TransitionProvider } from '@/components/providers/transition-provider'
+import { AboutContent } from '@/components/about-content'
 
-export default function AboutPage() {
+export default function About() {
   return (
-    <section>
-      <Box> Hello this is the about me page</Box>
-    </section>
+    <TransitionProvider>
+      <AboutContent />
+    </TransitionProvider>
   )
 }
