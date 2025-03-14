@@ -156,14 +156,40 @@
   }
 }
 
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .bento-box {
   will-change: transform, opacity;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Media query for smaller devices */
 @media (max-width: 768px) {
-  body {
-    height: auto;
+  html, body {
     overflow-y: auto;
+    position: static;
+  }
+  
+  body {
+    position: static;
+    height: auto;
   }
 }

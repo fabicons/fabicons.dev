@@ -1,3 +1,5 @@
+"use client"
+
 import { Box } from "./ui/box"
 import {
   BriefcaseBusiness,
@@ -8,6 +10,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { Button, buttonVariants } from "./ui/button"
+import { TransitionLink } from "./transition-link"
 
 const NavItem = ({
   href,
@@ -19,7 +22,7 @@ const NavItem = ({
   icon: React.ReactNode
 }) => {
   return href ? (
-    <Link
+    <TransitionLink
       className={`w-full !justify-between py-4 h-fit gap-6  ${buttonVariants({
         variant: "brutalist",
       })}`}
@@ -28,7 +31,7 @@ const NavItem = ({
     >
       <p className="text-2xl">{text}</p>
       {icon}
-    </Link>
+    </TransitionLink>
   ) : (
     <Button
       size="lg"
@@ -47,7 +50,7 @@ export default function Navbar() {
       <nav>
         <ul className="space-y-6">
           <li>
-            <NavItem text="Home" icon={<Home />} />
+            <NavItem text="Home" href="/" icon={<Home />} />
           </li>
           <li>
             <NavItem text="About" href="/about" icon={<ScanFace />} />

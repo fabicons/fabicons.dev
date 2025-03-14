@@ -27,9 +27,32 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
   const [nextPath, setNextPath] = useState<string | null>(null)
   const [isFirstRender, setIsFirstRender] = useState(true)
 
+  // Control body overflow based on screen size and animation state
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        // For larger screens, always keep overflow hidden
+        document.documentElement.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden'
+      } else {
+        // For smaller screens, allow scrolling
+        document.documentElement.style.overflow = 'auto'
+        document.body.style.overflow = 'auto'
+      }
+    }
+
+    // Set initial state
+    handleResize()
+    
+    // Listen for resize events
+    window.addEventListener('resize', handleResize)
+    
     // Set first render to false after mounting
     setIsFirstRender(false)
+    
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
   // Function to handle custom navigation with animations

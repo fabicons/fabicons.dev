@@ -4,11 +4,13 @@
 import { BentoBox } from './bento-box'
 import { TransitionLink } from './transition-link'
 
+
 export function HomeContent() {
   return (
-    <div className="grid grid-cols-3 gap-4 h-screen p-4">
+    // Add overflow-hidden to the main container on larger screens
+    <div className="grid grid-cols-3 gap-4 h-screen p-4 overflow-hidden">
       <BentoBox 
-        direction="top" 
+        direction="right" 
         delay={100}
         className="col-span-2 bg-blue-100 rounded-lg p-4"
       >

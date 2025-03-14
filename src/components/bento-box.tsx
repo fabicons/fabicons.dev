@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
-import { useTransitionContext } from './providers/transition-provider'
+import { useTransitionContext } from '@/components/providers/transition-provider'
 
 interface BentoBoxProps {
   direction: 'top' | 'right' | 'bottom' | 'left'
@@ -42,11 +42,12 @@ export function BentoBox({
 
   // Create the animation for the box
   const props = useSpring({
-    from: { opacity: 0, x: initialX, y: initialY },
+    from: { opacity: 0, transform: `translate3d(${initialX}px, ${initialY}px, 0)` },
     to: {
       opacity: isVisible && !isAnimatingOut ? 1 : 0,
-      x: isVisible && !isAnimatingOut ? 0 : initialX,
-      y: isVisible && !isAnimatingOut ? 0 : initialY,
+      transform: isVisible && !isAnimatingOut 
+        ? 'translate3d(0px, 0px, 0)' 
+        : `translate3d(${initialX}px, ${initialY}px, 0)`,
     },
     config: { mass: 1, tension: 280, friction: 60 },
     delay: isAnimatingOut ? 0 : delay,
