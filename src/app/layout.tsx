@@ -1,22 +1,23 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { ThemeProvider } from '@/components/providers/theme-provider'
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { ThemeProvider } from "@/components/providers/theme-provider"
 
-import './globals.css'
+import "./globals.css"
+import { TransitionProvider } from "@/components/providers/transition-provider"
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 })
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: 'fabicons portfolio',
-  description: 'frontend developer with emphasis on ui/ux',
+  title: "fabicons portfolio",
+  description: "frontend developer with emphasis on ui/ux",
 }
 
 export default function RootLayout({
@@ -35,7 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TransitionProvider>{children}</TransitionProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -154,4 +154,8 @@
   .grid-area-empty-bottom {
     grid-area: empty-bottom;
   }
+
+  .box-transition {
+    will-change: transform, opacity;
+  }
 }

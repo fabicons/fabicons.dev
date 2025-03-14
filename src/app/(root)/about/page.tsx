@@ -4,7 +4,10 @@ import React from "react"
 export default function AboutPage() {
   return (
     <section>
-      <Box> Hello this is the about me page</Box>
+      <Box direction="left" delay={300}>
+        {" "}
+        Hello this is the about me page
+      </Box>
     </section>
   )
 }
