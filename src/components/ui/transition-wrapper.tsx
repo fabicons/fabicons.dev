@@ -1,22 +1,21 @@
 "use client"
 
-import * as React from "react"
 import { useSpring, animated } from "@react-spring/web"
-import { useEffect, useState } from "react"
+import { useEffect, useState, ReactNode } from "react"
 import { useTransitionContext } from "../providers/transition-provider"
 import { cn } from "@/lib/utils"
 
 const directionMap: Record<string, { x?: number; y?: number; scale?: number }> =
   {
-    top: { y: -100, x: 0 },
-    right: { x: 100, y: 0 },
-    bottom: { y: 100, x: 0 },
-    left: { x: -100, y: 0 },
-    center: { scale: 0.8, x: 0, y: 0 },
+    top: { y: -1500, x: 0 },
+    right: { x: 1500, y: 0 },
+    bottom: { y: 1500, x: 0 },
+    left: { x: -1500, y: 0 },
+    center: { scale: 0.5, x: 0, y: 0 },
   }
 
 export interface TransitionWrapperProps {
-  children: React.ReactNode
+  children: ReactNode
   animate?: boolean
   direction?: "top" | "right" | "bottom" | "left" | "center"
   delay?: number
@@ -52,7 +51,8 @@ export function TransitionWrapper({
   const springProps = useSpring({
     from: animate
       ? {
-          opacity: 0,
+          // opacity:0,
+          opacity: direction === "center" ? 0 : 1,
           x: initialX,
           y: initialY,
           scale: direction === "center" ? initialScale : 1,
@@ -60,7 +60,8 @@ export function TransitionWrapper({
       : {},
     to: animate
       ? {
-          opacity: isVisible && !isAnimatingOut ? 1 : 0,
+          // opacity: isVisible && !isAnimatingOut ? 1: 0,
+          opacity: direction === "center" ? 1 : 1,
           x: isVisible && !isAnimatingOut ? 0 : initialX,
           y: isVisible && !isAnimatingOut ? 0 : initialY,
           scale:
@@ -71,9 +72,10 @@ export function TransitionWrapper({
               : 1,
         }
       : {},
-    config: { mass: 1, tension: 280, friction: 60 },
-    delay: isAnimatingOut ? 0 : delay,
-  })
+    config: { mass: 1, tension: 300, friction: 40 },
+    delay: delay,
+    // delay: isAnimatingOut ? 0 : delay,
+  }) as unknown
 
   if (!animate) {
     return <>{children}</>

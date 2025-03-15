@@ -52,7 +52,7 @@ const HeartButton = () => {
   return (
     <animated.button
       ref={buttonRef}
-      className={`w-auto lg:col-span-1 lg:row-span-1 lg:col-start-4 lg:h-full ${buttonVariants(
+      className={`w-full lg:h-full ${buttonVariants(
         {
           variant: "brutalist",
         }

@@ -16,7 +16,6 @@ export default function Home() {
       {/* Fabicons */}
       <TransitionWrapper
         direction="left"
-        delay={100}
         className="w-full lg:col-span-3 lg:row-span-2 font-black text-4xl flex flex-col justify-center"
       >
         <Box className="">
@@ -26,7 +25,7 @@ export default function Home() {
       {/* Location */}
       <TransitionWrapper
         direction="top"
-        delay={200}
+        delay={100}
         className="lg:col-span-3 lg:row-span-3 xl:col-span-4 lg:h-full h-64"
       >
         <Box className="w-full h-full pt-auto pb-0 px-0">
@@ -36,7 +35,7 @@ export default function Home() {
       {/* Profile pic */}
       <TransitionWrapper
         direction="top"
-        delay={300}
+        delay={200}
         className="w-full lg:col-span-3 lg:row-span-3 xl:col-span-2 "
       >
         <Box className="p-0 h-full">
@@ -51,55 +50,63 @@ export default function Home() {
         </Box>
       </TransitionWrapper>
       {/* Tech stack*/}
-      <Box className="w-full lg:col-span-3 lg:row-span-6 font-black text-4xl space-y-6 text-center">
-        <p> Tech Stack</p>
-        <TechStackList />
-      </Box>
+      <TransitionWrapper className="lg:col-span-3 lg:row-span-6" delay={500}>
+        <Box className="size-full font-black text-4xl space-y-6 text-center">
+          <p> Tech Stack</p>
+          <TechStackList />
+        </Box>
+      </TransitionWrapper>
       {/* Featured project */}
       <TransitionWrapper
         className="w-full lg:col-span-6 lg:row-span-3"
-        direction="center"
+        direction="left"
       >
         <Box className="h-full">WORKING</Box>
       </TransitionWrapper>
       {/* Github icon */}
-      <Link
-        href=""
-        className={`w-auto lg:col-span-1 lg:row-span-1 lg:h-full ${buttonVariants(
-          {
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1">
+        <Link
+          href=""
+          className={`w-full  lg:h-full ${buttonVariants({
             variant: "brutalist",
-          }
-        )}`}
-      >
-        <GithubIcon size={32} strokeWidth={1.5} />
-      </Link>
+          })}`}
+        >
+          <GithubIcon size={32} strokeWidth={1.5} />
+        </Link>
+      </TransitionWrapper>
       {/* Linkedin icon*/}
-      <Link
-        href=""
-        className={`w-auto lg:col-span-1 lg:row-span-1 lg:h-full ${buttonVariants(
-          {
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1">
+        <Link
+          href=""
+          className={`w-full  lg:h-full ${buttonVariants({
             variant: "brutalist",
-          }
-        )}`}
-      >
-        <LinkedinIcon className="stroke-1" />
-      </Link>
+          })}`}
+        >
+          <LinkedinIcon className="stroke-1" />
+        </Link>
+      </TransitionWrapper>
       {/* Languages */}
-      <Box className="w-full lg:col-span-4 lg:row-span-2 font-black text-2xl flex flex-col gap-6">
-        {" "}
-        <p> Talk to me in:</p>
-        <div className="flex gap-4">
-          <p>EN</p>
-          <p>DE</p>
-          <p>ES</p>
-          <p>CA</p>
-          <p>NOR</p>
-        </div>
-      </Box>
+      <TransitionWrapper className="w-full lg:col-span-4 lg:row-span-2 font-black text-2xl">
+        <Box className="h-full flex flex-col gap-6">
+          {" "}
+          <p> Talk to me in:</p>
+          <div className="flex gap-4">
+            <p>EN</p>
+            <p>DE</p>
+            <p>ES</p>
+            <p>CA</p>
+            <p>NOR</p>
+          </div>
+        </Box>
+      </TransitionWrapper>
       {/* Heart */}
-      <HeartButton />
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-4">
+        <HeartButton />
+      </TransitionWrapper>
       {/* Cookie */}
-      <CookieButton />
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-5 ">
+        <CookieButton />
+      </TransitionWrapper>
     </section>
   )
 }
