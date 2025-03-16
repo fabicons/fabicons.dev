@@ -60,11 +60,12 @@ export default function Home() {
       <TransitionWrapper
         className="w-full lg:col-span-6 lg:row-span-3"
         direction="left"
+        delay={250}
       >
         <Box className="h-full">WORKING</Box>
       </TransitionWrapper>
       {/* Github icon */}
-      <TransitionWrapper className="lg:col-span-1 lg:row-span-1">
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1" delay={300}>
         <Link
           href=""
           className={`w-full  lg:h-full ${buttonVariants({
@@ -75,7 +76,7 @@ export default function Home() {
         </Link>
       </TransitionWrapper>
       {/* Linkedin icon*/}
-      <TransitionWrapper className="lg:col-span-1 lg:row-span-1">
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1" delay={350}>
         <Link
           href=""
           className={`w-full  lg:h-full ${buttonVariants({
@@ -86,7 +87,7 @@ export default function Home() {
         </Link>
       </TransitionWrapper>
       {/* Languages */}
-      <TransitionWrapper className="w-full lg:col-span-4 lg:row-span-2 font-black text-2xl">
+      <TransitionWrapper className="w-full lg:col-span-4 lg:row-span-2 font-black text-2xl" delay={300}>
         <Box className="h-full flex flex-col gap-6">
           {" "}
           <p> Talk to me in:</p>
@@ -100,11 +101,11 @@ export default function Home() {
         </Box>
       </TransitionWrapper>
       {/* Heart */}
-      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-4">
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-4" delay={400}>
         <HeartButton />
       </TransitionWrapper>
       {/* Cookie */}
-      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-5 ">
+      <TransitionWrapper className="lg:col-span-1 lg:row-span-1 lg:col-start-5" delay={450}>
         <CookieButton />
       </TransitionWrapper>
     </section>

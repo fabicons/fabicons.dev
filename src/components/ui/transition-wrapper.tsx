@@ -72,7 +72,7 @@ export function TransitionWrapper({
               : 1,
         }
       : {},
-    config: { mass: 1, tension: 300, friction: 40 },
+    config: { mass: 1, tension: 250, friction: 60 },
     delay: delay,
     // delay: isAnimatingOut ? 0 : delay,
   }) as unknown
